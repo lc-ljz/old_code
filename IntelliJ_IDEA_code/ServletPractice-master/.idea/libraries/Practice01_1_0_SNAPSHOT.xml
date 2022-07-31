@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Practice01-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/Practice01-1.0-SNAPSHOT.war!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
