@@ -1,0 +1,10 @@
+A = [1e-16, 1; 1, 1]; b = [1; 2];
+A = A([2,1],:); b = b([2,1]);
+format long;
+fprintf("使用 A\\b 求解: x=[%f; %f]\n", A\b);
+Ab = [A, b];
+Ab(2, :) = Ab(2, :) - Ab(2,1)/Ab(1,1) * Ab(1,:);
+x2 = Ab(2, 3)/Ab(2, 2);
+x1 = (Ab(1, 3) - Ab(1,2)*x2)/Ab(1, 1);
+format long;
+fprintf("使用高斯消元法: x=[%f, %f].\n", [x1, x2]);

@@ -1,0 +1,12 @@
+n=1024;
+t=-512:511;
+A=zeros([n,n]);
+[x,y]=meshgrid(t,t);
+distance=300;p=20;%30
+D=abs(x).^p+abs(y).^p;
+D=D.^(1/p);
+logic=D-distance;
+logic=abs(logic)<2;
+A=zeros(n);
+A(logic)=1;
+imshow(A);

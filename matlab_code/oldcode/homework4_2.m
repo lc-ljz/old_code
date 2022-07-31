@@ -1,0 +1,11 @@
+x=[-pi/2,pi,5*pi/2];
+y=[-1,0,1];
+scatter(x,y,'r*');
+A=repmat(x,[3,1]);
+A=A';
+p=0:2;
+v=A.^p;
+y=y';
+b=v\y;
+x=linspace(x(1),x(3));
+hold on;plot(x,b(1)+b(2)*x+b(3)*(x.^2));
