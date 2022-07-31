@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javaScript" src='./js/vue.js'></script>
+    </head>
+    <body>
+        <div id="root">
+           <xuexiao></xuexiao>
+           <hr>
+           <xuesheng></xuesheng>
+        </div>
+    </body>
+    <script type="text/javaScript">
+
+        Vue.config.productionTip = false
+
+        //创建school组件
+        const school = Vue.extend({ //没有el
+            template:`
+                <div>
+                    <h2>学校名称：{{schoolName}}</h2>
+                    <h2>学校地址：{{address}}</h2>
+                </div>
+            `,
+            data(){
+                return {
+                    schoolName:"济南大学",
+                    address:"山东",
+                }
+            },
+        })
+
+        const student = Vue.extend({ //没有el
+            template:`
+                <div>
+                    <h2>学生姓名：{{studentName}}</h2>
+                    <h2>年龄：{{age}}</h2>
+                </div>
+            `,
+            data(){
+                return {
+                    studentName:"刘九洲",
+                    age:22,
+                }
+            },
+        })
+
+
+
+        new Vue({
+            el:"#root",
+            components:{  // 注册组件(局部注册)
+                xuexiao:school,
+                xuesheng:student
+            }
+        })
+
+    </script>
+</html>

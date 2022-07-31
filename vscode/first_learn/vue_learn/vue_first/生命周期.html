@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javaScript" src='./js/vue.js'></script>
+    </head>
+    <body>
+        <div id="root">
+            <h2 :style="{opacity}">欢迎光临</h2>
+        </div>
+    </body>
+    <script type="text/javaScript">
+
+        new Vue({
+            el:"#root",
+            data(){
+                return {
+                    opacity:1,
+                }
+            },
+            //挂载完毕;vue完成模板解析，把 初始的真实dom 放入页面后
+            mounted() {
+                setInterval(() => {
+                    this.opacity -= 0.01
+                    if(this.opacity <= 0) this.opacity = 1
+                }, 16);
+            },
+            beforeCreate() {  //还未进行数据代理
+                console.log("beforeCreate")
+                // debugger;
+            },
+            created() {//完成数据监测,数据代理
+                console.log("created")
+            },
+            beforeMount() {
+                console.log("beforeMount")
+            },
+        })
+
+    </script>
+</html>

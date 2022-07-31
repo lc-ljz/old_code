@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>VUE_try</title>
+        <script type="text/javaScript" src="js/vue.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            {{info}}<br/>
+            <button @click="change">切换</button>
+        </div>
+    </body>
+
+    <script type="text/javaScript">
+        new Vue({
+            el:"#root",
+            data(){
+                return{
+                    ishot:false,
+                    numbers:{
+                        a:1,
+                        b:1
+                    }
+                }
+            },
+            methods: {
+                change(){
+                    this.ishot = !this.ishot
+                }
+            },
+            computed:{  //计算属性
+                info:{
+                    get(){
+                        return this.ishot?"热":"冷"
+                    }
+                }
+            },
+            watch:{  //监控
+                ishot:{
+                    // immediate:true, //初始化时让handler调用一下
+                    handler(newValue,oldValue){ //ishot改变
+                        console.log("ishot改变了",newValue,oldValue)
+                    }
+                },
+                numbers:{
+                    deep:true,//深度监视   /watch中，监视多级结构中所有属性的变化
+                    handler(){
+                        console.log("numbers改变了")
+                    }
+                }
+            }
+        })
+    </script>
+
+</html>
+

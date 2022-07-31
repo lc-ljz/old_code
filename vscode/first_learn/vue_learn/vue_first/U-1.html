@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<!-- axios 异步通信，类似ajax
+        componet 组件
+-->
+<head>
+    <meta charset="UTF-8" />
+    <title>the first</title>
+    <script type="text/javaScript" src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id='root'>
+        姓：<input type="text" v-model="firstName"><br/>
+        名：<input type="text" v-model="lastName"><br/>
+        <!-- 姓名：<span>{{firstName}}-{{lastName}}</span> -->
+        <!-- 姓名：<span>{{fullName()}}</span> -->
+        姓名：<span>{{fullName}}</span>
+    </div>
+
+    <script type="text/javaScript">
+
+        // Vue.config.productionTip=false
+
+        var vm = new Vue({
+            el:"#root",
+            data:{
+                firstName:"张",
+                lastName:"三"
+            },
+            // methods:{
+            //     fullName(){
+            //         return this.firstName + '-' + this.lastName
+            //     }
+            // },
+            computed:{ // 计算属性
+                fullName:{//  会存储在缓存
+                    get(){ //  1.初次读取fullName时调用 2.所依赖的数据发生变化时
+                        console.log("调用了get")
+                        return this.firstName + '-' + this.lastName
+                    }
+                }
+            },
+                
+        })
+    </script>
+
+</body>
+
+</html>
