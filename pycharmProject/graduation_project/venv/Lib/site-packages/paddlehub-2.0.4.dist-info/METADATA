@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: paddlehub
+Version: 2.0.4
+Summary: A toolkit for managing pretrained models of PaddlePaddle and helping user getting started with transfer learning more efficiently.
+Home-page: https://github.com/PaddlePaddle/PaddleHub
+Author: PaddlePaddle Author
+Author-email: UNKNOWN
+License: Apache 2.0
+Keywords: paddlehub paddlepaddle fine-tune transfer-learning
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: colorama
+Requires-Dist: colorlog
+Requires-Dist: easydict
+Requires-Dist: filelock
+Requires-Dist: flask (>=1.1.0)
+Requires-Dist: gitpython
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: opencv-python
+Requires-Dist: packaging
+Requires-Dist: Pillow
+Requires-Dist: pyyaml
+Requires-Dist: pyzmq
+Requires-Dist: rarfile
+Requires-Dist: tqdm
+Requires-Dist: visualdl (>=2.0.0)
+Requires-Dist: paddlenlp (>=2.0.0rc5)
+Requires-Dist: gunicorn (>=19.10.0) ; sys_platform != "win32"
+
+UNKNOWN
+
+

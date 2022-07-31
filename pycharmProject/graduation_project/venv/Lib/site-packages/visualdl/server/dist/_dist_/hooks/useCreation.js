@@ -1,0 +1,1 @@
+import{useRef as t}from"../../web_modules/react.js";export default function u(r,i){const{current:e}=t({deps:i,obj:void 0,initialized:!1});return(e.initialized===!1||!n(e.deps,i))&&(e.deps=i,e.obj=r(),e.initialized=!0),e.obj}function n(r,i){if(r===i)return!0;for(const e in r)if(r[e]!==i[e])return!1;return!0}

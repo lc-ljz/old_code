@@ -1,0 +1,1 @@
+const env = globalThis.__snowpack_env__ || {}; export default env;

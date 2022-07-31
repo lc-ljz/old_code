@@ -1,0 +1,1 @@
+import{useCallback as e,useMemo as s}from"../../web_modules/react.js";const c=o=>{const t=s(()=>window.localStorage.getItem(o),[o]),r=e(l=>window.localStorage.setItem(o,l),[o]),a=e(()=>window.localStorage.removeItem(o),[o]);return[t,r,a]};export default c;

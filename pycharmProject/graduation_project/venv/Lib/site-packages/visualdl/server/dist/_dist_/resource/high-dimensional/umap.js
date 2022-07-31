@@ -1,0 +1,1 @@
+import{UMAP as f}from"../../../web_modules/umap-js.js";export default(d,m,t,o,r)=>{if(t.length===0)return;const i=new f({nComponents:d,nNeighbors:m}),s=[];for(let e=0;e<t.length;e+=o)s.push(Array.from(t.slice(e,e+o)));const n=i.initializeFit(s);for(let e=0;e<n;e++)r==null||r(e,n),i.step();return{embedding:i.getEmbedding(),nEpochs:n}};

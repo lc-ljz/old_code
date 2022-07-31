@@ -1,0 +1,1 @@
+import{Route as o}from"../../web_modules/react-router-dom.js";import t,{useEffect as s}from"../../web_modules/react.js";import e from"../../web_modules/nprogress.js";const m=r=>(s(()=>(e.start(),()=>{e.done()}),[]),t.createElement(o,r));export default m;

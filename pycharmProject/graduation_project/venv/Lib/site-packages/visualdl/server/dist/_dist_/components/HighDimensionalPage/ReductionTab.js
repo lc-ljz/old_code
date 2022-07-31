@@ -1,0 +1,1 @@
+import n from"../../../web_modules/react.js";import i from"../Tab.js";import{useTranslation as r}from"../../../web_modules/react-i18next.js";const s=["tsne","pca","umap"],m=({value:t,onChange:o})=>{const{t:a}=r("high-dimensional");return n.createElement(i,{list:s.map(e=>({value:e,label:a(`high-dimensional:reduction-value.${e}`)})),value:t,onChange:o})};export default m;

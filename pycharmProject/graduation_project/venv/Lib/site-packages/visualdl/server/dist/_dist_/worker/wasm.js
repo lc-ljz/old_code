@@ -1,0 +1,1 @@
+import*as i from"../../web_modules/@visualdl/wasm.js";import l from"../../web_modules/@visualdl/wasm.js";const n=async s=>{const t=s.env.SNOWPACK_PUBLIC_PATH;await l(`${t}/wasm/visualdl.wasm`),s.on("RUN",({name:m,params:e})=>{try{const a=i[m](...e);s.emit("RESULT",a)}catch(a){if(a.message!=="unreachable")throw a}}),s.emit("INITIALIZED")};export default n;
